@@ -7,20 +7,20 @@ A simple Node.js wrapper for the Git CLI. The API is based on
 
 This fork is now in the `npm` package repository. Install it like you would any other package:
 
-    $ npm install gift
+    $ npm install rhythm.gift
 
 # API
 
 For existing repositories:
 
-    git  = require 'gift'
+    git  = require 'rhythm.gift'
 
     repo = git "path/to/repo"
     # => #<Repo>
 
 Initialize a new repository:
 
-    git = require 'gift'
+    git = require 'rhythm.gift'
 
     git.init "path/to/repo", (err, _repo) ->
       repo = _repo
@@ -28,7 +28,7 @@ Initialize a new repository:
 
 Initialize a new bare repository:
 
-    git = require 'gift'
+    git = require 'rhythm.gift'
 
     git.init "path/to/bare/repo", true, (err, _repo) ->
       repo = _repo
@@ -36,7 +36,7 @@ Initialize a new bare repository:
 
 Clone a repository:
 
-    git = require 'gift'
+    git = require 'rhythm.gift'
 
     git.clone "git@host:path/to/remote/repo.git", "path/to/local/clone/repo", (err, _repo) ->
       repo = _repo
